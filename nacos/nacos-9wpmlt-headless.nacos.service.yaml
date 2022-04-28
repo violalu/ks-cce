@@ -1,0 +1,31 @@
+﻿kind: Service
+apiVersion: v1
+metadata:
+  name: nacos-9wpmlt-headless
+  namespace: nacos
+  labels:
+    app: nacos
+    app.kubernetes.io/managed-by: Helm
+    app.kubesphere.io/instance: nacos-9wpmlt
+    chart: nacos-2.0.0
+    heritage: Helm
+    release: nacos-9wpmlt
+  annotations:
+    kubesphere.io/creator: admin
+    meta.helm.sh/release-name: nacos-9wpmlt
+    meta.helm.sh/release-namespace: nacos
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8848
+      targetPort: http
+  selector:
+    app: nacos
+    release: nacos-9wpmlt
+  clusterIP: None
+  clusterIPs:
+    - None
+  type: ClusterIP
+  sessionAffinity: None
+  publishNotReadyAddresses: true

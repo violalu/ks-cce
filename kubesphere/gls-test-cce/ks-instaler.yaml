@@ -1,0 +1,217 @@
+apiVersion: installer.kubesphere.io/v1alpha1
+kind: ClusterConfiguration
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"installer.kubesphere.io/v1alpha1","kind":"ClusterConfiguration","metadata":{"annotations":{},"labels":{"version":"v3.2.1"},"name":"ks-installer","namespace":"kubesphere-system"},"spec":{"alerting":{"enabled":false},"auditing":{"enabled":false},"authentication":{"jwtSecret":"bJDpquMUOWbvENXWcQB0nHlbmdPaIa3H"},"common":{"core":{"console":{"enableMultiLogin":true,"port":30880,"type":"NodePort"}},"es":{"basicAuth":{"enabled":false,"password":"","username":""},"elkPrefix":"logstash","externalElasticsearchPort":"","externalElasticsearchUrl":"","logMaxAge":7},"gpu":{"kinds":[{"default":true,"resourceName":"nvidia.com/gpu","resourceType":"GPU"}]},"minio":{"volumeSize":"20Gi"},"monitoring":{"GPUMonitoring":{"enabled":false},"endpoint":"http://prometheus-operated.kubesphere-monitoring-system.svc:9090"},"openldap":{"enabled":false,"volumeSize":"2Gi"},"redis":{"enabled":false,"volumeSize":"2Gi"}},"devops":{"enabled":false,"jenkinsJavaOpts_MaxRAM":"2g","jenkinsJavaOpts_Xms":"512m","jenkinsJavaOpts_Xmx":"512m","jenkinsMemoryLim":"2Gi","jenkinsMemoryReq":"1500Mi","jenkinsVolumeSize":"8Gi"},"etcd":{"endpointIps":"localhost","monitoring":false,"port":2379,"tlsEnable":true},"events":{"enabled":false},"kubeedge":{"cloudCore":{"cloudHub":{"advertiseAddress":[""],"nodeLimit":"100"},"cloudhubHttpsPort":"10002","cloudhubPort":"10000","cloudhubQuicPort":"10001","cloudstreamPort":"10003","nodeSelector":{"node-role.kubernetes.io/worker":""},"service":{"cloudhubHttpsNodePort":"30002","cloudhubNodePort":"30000","cloudhubQuicNodePort":"30001","cloudstreamNodePort":"30003","tunnelNodePort":"30004"},"tolerations":[],"tunnelPort":"10004"},"edgeWatcher":{"edgeWatcherAgent":{"nodeSelector":{"node-role.kubernetes.io/worker":""},"tolerations":[]},"nodeSelector":{"node-role.kubernetes.io/worker":""},"tolerations":[]},"enabled":false},"local_registry":"","logging":{"containerruntime":"docker","enabled":false,"logsidecar":{"enabled":true,"replicas":2}},"metrics_server":{"enabled":false},"monitoring":{"gpu":{"nvidia_dcgm_exporter":{"enabled":false}},"storageClass":""},"multicluster":{"clusterRole":"none"},"network":{"ippool":{"type":"none"},"networkpolicy":{"enabled":false},"topology":{"type":"none"}},"openpitrix":{"store":{"enabled":false}},"persistence":{"storageClass":"csi-disk"},"servicemesh":{"enabled":false}}}
+  creationTimestamp: "2022-04-20T05:17:05Z"
+  generation: 38
+  labels:
+    version: v3.2.1
+  managedFields:
+  - apiVersion: installer.kubesphere.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:logging: {}
+    manager: Mozilla
+    operation: Update
+    time: "2022-04-21T06:22:47Z"
+  - apiVersion: installer.kubesphere.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:version: {}
+      f:spec:
+        .: {}
+        f:alerting: {}
+        f:auditing: {}
+        f:authentication: {}
+        f:common: {}
+        f:devops: {}
+        f:etcd: {}
+        f:events: {}
+        f:kubeedge: {}
+        f:local_registry: {}
+        f:metrics_server: {}
+        f:monitoring: {}
+        f:multicluster: {}
+        f:network: {}
+        f:openpitrix: {}
+        f:persistence: {}
+        f:servicemesh: {}
+      f:status:
+        .: {}
+        f:auditing: {}
+        f:clusterId: {}
+        f:core: {}
+        f:devops: {}
+        f:es: {}
+        f:events: {}
+        f:fluentbit: {}
+        f:logging: {}
+        f:minio: {}
+        f:monitoring: {}
+        f:openldap: {}
+        f:servicemesh: {}
+    manager: kubectl
+    operation: Update
+    time: "2022-04-22T01:37:15Z"
+  name: ks-installer
+  namespace: kubesphere-system
+  resourceVersion: "1233087"
+  uid: 86955dce-854a-461b-96ff-986b3d808e0a
+spec:
+  alerting:
+    enabled: truee
+  auditing:
+    enabled: true
+  authentication:
+    jwtSecret: bJDpquMUOWbvENXWcQB0nHlbmdPaIa3H
+  common:
+    core:
+      console:
+        enableMultiLogin: true
+        port: 30880
+        type: NodePort
+    es:
+      basicAuth:
+        enabled: false
+        password: ""
+        username: ""
+      elkPrefix: logstash
+      externalElasticsearchPort: ""
+      externalElasticsearchUrl: ""
+      logMaxAge: 7
+    gpu:
+      kinds:
+      - default: true
+        resourceName: nvidia.com/gpu
+        resourceType: GPU
+    minio:
+      volumeSize: 20Gi
+    monitoring:
+      GPUMonitoring:
+        enabled: false
+      endpoint: http://prometheus-operated.kubesphere-monitoring-system.svc:9090
+    openldap:
+      enabled: false
+      volumeSize: 2Gi
+    redis:
+      enabled: false
+      volumeSize: 2Gi
+  devops:
+    enabled: true
+    jenkinsJavaOpts_MaxRAM: 2g
+    jenkinsJavaOpts_Xms: 512m
+    jenkinsJavaOpts_Xmx: 512m
+    jenkinsMemoryLim: 2Gi
+    jenkinsMemoryReq: 1500Mi
+    jenkinsVolumeSize: 8Gi
+  etcd:
+    endpointIps: localhost
+    monitoring: false
+    port: 2379
+    tlsEnable: true
+  events:
+    enabled: true
+  kubeedge:
+    cloudCore:
+      cloudHub:
+        advertiseAddress:
+        - ""
+        nodeLimit: "100"
+      cloudhubHttpsPort: "10002"
+      cloudhubPort: "10000"
+      cloudhubQuicPort: "10001"
+      cloudstreamPort: "10003"
+      nodeSelector:
+        node-role.kubernetes.io/worker: ""
+      service:
+        cloudhubHttpsNodePort: "30002"
+        cloudhubNodePort: "30000"
+        cloudhubQuicNodePort: "30001"
+        cloudstreamNodePort: "30003"
+        tunnelNodePort: "30004"
+      tolerations: []
+      tunnelPort: "10004"
+    edgeWatcher:
+      edgeWatcherAgent:
+        nodeSelector:
+          node-role.kubernetes.io/worker: ""
+        tolerations: []
+      nodeSelector:
+        node-role.kubernetes.io/worker: ""
+      tolerations: []
+    enabled: false
+  local_registry: ""
+  logging:
+    containerruntime: containerd
+    enabled: true
+    logsidecar:
+      enabled: true
+      replicas: 2
+  metrics_server:
+    enabled: false
+  monitoring:
+    gpu:
+      nvidia_dcgm_exporter:
+        enabled: false
+    storageClass: ""
+  multicluster:
+    clusterRole: member
+  network:
+    ippool:
+      type: none
+    networkpolicy:
+      enabled: false
+    topology:
+      type: none
+  openpitrix:
+    store:
+      enabled: false
+  persistence:
+    storageClass: csi-disk
+  servicemesh:
+    enabled: true
+status:
+  auditing:
+    enabledTime: 2022-04-22T09:37:03CST
+    status: enabled
+  clusterId: 41e9f321-6682-43d4-ba10-8ab4ac5c1c24-1650522453
+  core:
+    enabledTime: 2022-04-22T09:36:07CST
+    status: enabled
+    version: v3.2.1
+  devops:
+    enabledTime: 2022-04-21T14:25:49CST
+    status: enabled
+  es:
+    enabledTime: 2022-04-21T14:23:26CST
+    status: enabled
+  events:
+    enabledTime: 2022-04-22T09:37:14CST
+    status: enabled
+  fluentbit:
+    enabledTime: 2022-04-21T14:23:42CST
+    status: enabled
+  logging:
+    enabledTime: 2022-04-21T14:25:32CST
+    status: enabled
+  minio:
+    enabledTime: 2022-04-21T14:23:23CST
+    status: enabled
+  monitoring:
+    enabledTime: 2022-04-22T09:37:47CST
+    status: enabled
+  openldap:
+    enabledTime: 2022-04-21T14:23:16CST
+    status: enabled
+  servicemesh:
+    enabledTime: 2022-04-21T14:25:42CST
+    status: enabled

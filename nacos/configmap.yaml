@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nacos-9wpmlt
+  namespace: nacos
+  labels:
+    app: nacos
+    chart: nacos-2.0.0
+    release: nacos-9wpmlt
+    heritage: Helm
+data:
+  sql_files: "https://raw.githubusercontent.com/alibaba/nacos/2.0.4/distribution/conf/nacos-mysql.sql"
